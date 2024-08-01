@@ -15,14 +15,12 @@ from trackeval.metrics import *
 if __name__ == '__main__':
 
     config={}
-    #"/data1/Datasets/Tracking/MOT/VTMOT/images/results/PIDMOT_RGBT/model_1_/"
-    #"/data1/Datasets/Tracking/MOT/VTMOT/images/results/FairMOT_V3/model_1/"
-    config['TRACKERS_FOLDER'] = "/home/zhuyabin/MOT/TraDeS/exp/tracking/VTMOT_RGBT_PFM_RGBT/results_motmot_rgbt_test_11"
-    config['GT_FOLDER'] = "/data1/Datasets/Tracking/MOT/VTMOT/images/test/"  # 给出gt路径
-    config['OUTPUT_FOLDER'] = '/home/zhuyabin/MOT/MOTRv2-Ours/T_R'
+    config['TRACKERS_FOLDER'] = "/home/zhuyabin/MOT/TraDeS/exp/tracking/VTMOT_RGBT_PFM_RGBT/results_motmot_rgbt_test_11" #test_files path
+    config['GT_FOLDER'] = "/data1/Datasets/Tracking/MOT/VTMOT/images/test/"  # gt_files path
+    config['OUTPUT_FOLDER'] = './data/T_R'
 
     # 确定文件内gt.txt的路径，gt_folder=config['GT_FOLDER']，seq为os.listdir(gt_folder)列表
-    config['GT_LOC_FORMAT'] = '{gt_folder}/{seq}/gt/gt1.txt'
+    config['GT_LOC_FORMAT'] = '{gt_folder}/{seq}/gt/gt1.txt' #类别合并后的gt文件
     config['CLASSES_TO_EVAL'] = ['pedestrian']  # 确定预测指标的类别
 
 

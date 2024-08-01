@@ -1,6 +1,6 @@
 # PFTrack
-#Visible-Thermal Multiple Object Tracking: Large-scale Video Dataset and Progressive Fusion Approach
-Simultaneous object detection and tracking using center points:
+
+## Visible-Thermal Multiple Object Tracking: Large-scale Video Dataset and Progressive Fusion Approach
 ![](readme/MOT.png)
 > [**Visible-Thermal Multiple Object Tracking: Large-scale Video Dataset and Progressive Fusion Approach**](http://arxiv.org/abs/2004.01177),            
 > Yabin Zhu, Qianwu Wang, Chenglong Li, Jin Tang, Zhixiang Huang  
@@ -128,7 +128,6 @@ The script includes:
 ## Use PFTrack
 
 
-
 ## Training on VT-MOT
 
 ~~~
@@ -142,3 +141,16 @@ python -u main.py tracking --modal RGB-T --save_all  --exp_id VTMOT_PFTrack  --d
 ~~~
 python test_rgbt.py tracking --modal RGB-T --test_mot_rgbt True --exp_id VTMOT_PFTrack --dataset mot_rgbt --dataset_version mot_rgbt --pre_hm --ltrb_amodal --track_thresh 0.4 --pre_thresh 0.5 --load_model ./exp/tracking/VTMOT_RGBT/model.pth
 ~~~
+
+## Eval
+~~~
+cd trackeval
+python run_mot_challenge.py
+~~~
+
+
+## Acknowledgement
+
+Tracking Objects as Points: https://github.com/xingyizhou/CenterTrack
+trackeval: https://github.com/JonathonLuiten/TrackEval
+	
