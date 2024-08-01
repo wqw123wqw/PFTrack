@@ -1,60 +1,57 @@
-# Tracking Objects as Points
+# PFTrack
+#Visible-Thermal Multiple Object Tracking: Large-scale Video Dataset and Progressive Fusion Approach
 Simultaneous object detection and tracking using center points:
-![](readme/fig2.png)
-> [**Tracking Objects as Points**](http://arxiv.org/abs/2004.01177),            
-> Xingyi Zhou, Vladlen Koltun, Philipp Kr&auml;henb&uuml;hl,        
+![](readme/MOT.png)
+> [**Visible-Thermal Multiple Object Tracking: Large-scale Video Dataset and Progressive Fusion Approach**](http://arxiv.org/abs/2004.01177),            
+> Yabin Zhu, Qianwu Wang, Chenglong Li, Jin Tang, Zhixiang Huang  
+*************************************************      
 > *arXiv technical report ([arXiv 2004.01177](http://arxiv.org/abs/2004.01177))*  
+*************************************************
 
 
     @article{zhou2020tracking,
-      title={Tracking Objects as Points},
-      author={Zhou, Xingyi and Koltun, Vladlen and Kr{\"a}henb{\"u}hl, Philipp},
-      journal={ECCV},
-      year={2020}
+      title={Visible-Thermal Multiple Object Tracking: Large-scale Video Dataset and Progressive Fusion Approach},
+      author={Yabin Zhu, Qianwu Wang, Chenglong Li, Jin Tang, Zhixiang Huang},
+      year={2024}
     }
-nohup python -u main.py tracking  --exp_id mot_rgbt --dataset mot_rgbt --dataset_version mot_rgbt --load_model /home/oil/Wangqianwu/CenterTrack/models/mot17_fulltrain.pth --batch_size 12 --pre_hm --ltrb_amodal --same_aug --hm_disturb 0.05 --lost_disturb 0.4 --fp_disturb 0.1 --gpus 0 >> /home/oil/Wangqianwu/CenterTrack/CenterTrack_RGBT.log 2>&1 &
-Contact: [zhouxy2017@gmail.com](mailto:zhouxy2017@gmail.com). Any questions or discussion are welcome! 
+Contact: [1597474391@qq.com](mailto:1597474391@qq.com). Any questions or discussion are welcome! 
 
 ## Abstract
-Tracking has traditionally been the art of following interest points through space and time. This changed with the rise of powerful deep networks. Nowadays, tracking is dominated by pipelines that perform object detection followed by temporal association, also known as tracking-by-detection. In this paper, we present a simultaneous detection and tracking algorithm that is simpler, faster, and more accurate than the state of the art. Our tracker, CenterTrack, applies a detection model to a pair of images and detections from the prior frame. Given this minimal input, CenterTrack localizes objects and predicts their associations with the previous frame. That's it. CenterTrack is simple, online (no peeking into the future), and real-time. It achieves 67.3% MOTA on the MOT17 challenge at 22 FPS and 89.4% MOTA on the KITTI tracking benchmark at 15 FPS, setting a new state of the art on both datasets. CenterTrack is easily extended to monocular 3D tracking by regressing additional 3D attributes. Using monocular video input, it achieves 28.3% AMOTA@0.2 on the newly released nuScenes 3D tracking benchmark, substantially outperforming the monocular baseline on this benchmark while running at 28 FPS.
+The complementary benefits from visible and thermal infrared data are widely utilized in various computer vision task, such as visual tracking, semantic segmentation and object detection, but rarely explored in Multiple Object Tracking (MOT). In this work, we contribute a large-scale Visible-Thermal video benchmark for MOT, called VT-MOT. VT-MOT has the following main advantages. 1) The data is large scale and high diversity. VT-MOT includes 582 video sequence pairs, 401k frame pairs from surveillance, drone, and handheld platforms. 2) The cross-modal alignment is highly accurate. We invite several professionals to perform both spatial and temporal alignment frame by frame. 3) The annotation is dense and high-quality. VT-MOT has 3.99 million annotation boxes annotated and double-checked by professionals, including heavy occlusion and object re-acquisition (object disappear and reappear) challenges.
+To provide a strong baseline, we design a simple yet effective tracking framework, which effectively fuses temporal information and complementary information of two modalities in a progressive manner, for robust visible-thermal MOT. 
+A comprehensive experiment are conducted on VT-MOT and the results prove the superiority and effectiveness of the proposed method compared with state-of-the-art methods. 
 
+## contribution
 
-## Features at a glance
-
-- One-sentence method summary: Our model takes the current frame, the previous frame, and a heatmap rendered from previous tracking results as input, and predicts the current detection heatmap as well as their offsets to centers in the previous frame.
-
-- The model can be trained on still **image datasets** if videos are not available.
-
-- Easily extends to monocular 3d object tracking, multi-category tracking, and pose tracking.
-
-- State-of-the-art performance on MOT17, KITTI, and nuScenes monocular tracking benchmarks.
-
+- We build a large-scale visible-thermal MOT dataset VT-MOT, which can promote the research and development of MOT in all weather and all day. The dataset includes 582 video sequence pairs with 401k frame pairs captured in surveillance, drone and handheld platforms. 
+- We perform manual spatio-temporal alignment of all video sequences of both modalities in a frame by frame manner to ensure high-quality alignment of the two modalities. Moreover, dense and high-quality annotation is provided for comprehensive evaluation of different MOT algorithms. These annotation contain 3.99 million bounding boxes and heavy occlusion and object re-acquisition  challenge labels.
+- We also propose a simple yet effective progressive fusion tracking framework, which effectively fuses temporal and complementary information of two modalities in a progressive manner, for robust visible-thermal MOT.
+- We perform numerous experiments on VT-MOT dataset, and the results prove the superiority and effectiveness of the
+proposed method compared with state-of-the-art methods.
 ## Main results
 
-### Pedestrian tracking on MOT17 test set
+### Tracking performance comparison of several evaluated trackers on VT-MOT testing set.
 
-| Detection    |  MOTA     | FPS    |
-|--------------|-----------|--------|
-|Public        | 61.5      |  22    |
-|Private       | 67.8      |  22    |
+| Method       | Publication | Modality | HOTA       | DetA       | MOTP       | IDF1       | MOTA       |
+|--------------|:-----------:|:--------:|------------|------------|------------|------------|------------|
+| FairMOT      |  IJCV 2021  |    V-T   | 37.35      | 34.628     | 72.525     | 45.795     | 37.266     |
+| CenterTrack  |  ECCV 2020  |    V-T   | 39.045     | 38.104     | 72.874     | 44.42      | 30.585     |
+| TraDes       |  CVPR 2021  |    V-T   | 38.319     | 36.37      | 72.295     | 47.008     | 34.632     |
+| TransTrack   |  arXiv 2021 |    V-T   | 38.00      | 35.711     | 73.823     | 43.567     | 36.156     |
+| ByteTracK    |  ECCV 2022  |    V-T   | 38.393     | 32.122     | 73.483     | 45.757     | 33.151     |
+| OC-SORT      |   CVPR2023  |    V-T   | 31.479     | 25.244     | 73.15      | 38.086     | 28.948     |
+| MixSort-OC   |   ICCV2023  |    V-T   | 39.09      | 33.109     | 73.632     | 45.799     | 31.33      |
+| MixSort-Byte |   ICCV2023  |    V-T   | 39.575     | 34.806     | 73.049     | 46.367     | 31.593     |
+| PID-MOT      |  TCSVT 2023 |    V-T   | 35.621     | 33.245     | 71.794     | 42.43      | 33.333     |
+| Hybrid-SORT  |   AAAI2024  |    V-T   | 39.485     | 34.619     | 72.840     | 46.310     | 31.074     |
+| **Ours **        |      -      |    V-T   | **41.068** | **41.631** | **73.949** | **47.254** | **43.088** |
 
-### 2D vehicle tracking on KITTI test set (with flip test)
 
-|  MOTA       |  FPS   |
-|-------------|--------|
-| 89.44       |   15   |
 
-### 3D tracking on nuScenes test set
+Besides benchmark evaluation, we also provide models for 80-category tracking and pose tracking trained on COCO. See the sample visual results below (Video files from [openpose] (video/VTMOT.mp4)
 
-|  AMOTA @ 0.2  |  AMOTA  |  FPS   |
-|---------------|---------|--------|
-| 27.8          |    4.6  | 28     |
 
-Besides benchmark evaluation, we also provide models for 80-category tracking and pose tracking trained on COCO. See the sample visual results below (Video files from [openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) and [YOLO](https://pjreddie.com/darknet/yolov2/)).
-
-<p align="center"> <img src='readme/coco_det.gif' align="center" height="230px"> </p> 
-
-<p align="center"> <img src='readme/coco_pose.gif' align="center" height="230px"> </p>
+<p align="center"> <img src='readme/VTMOT.gif' align="center" height="460px"> </p>
 
 All models and details are available in our [Model zoo](readme/MODEL_ZOO.md).
 
@@ -62,9 +59,7 @@ All models and details are available in our [Model zoo](readme/MODEL_ZOO.md).
 
 Please refer to [INSTALL.md](readme/INSTALL.md) for installation instructions.
 
-## Use CenterTrack
-
-We support demo for videos, webcam, and image folders. 
+## Use PFTrack
 
 First, download the models (By default, [nuscenes\_3d\_tracking](https://drive.google.com/file/d/1gPQFzqneDtT_PjJRRuyskRsNTRHXovw1) for monocular 3D tracking, [coco_tracking](https://drive.google.com/file/d/11DEfWa0TKYzNqY3CXR51WVvjMb4oRl08) for 80-category detection and 
 [coco_pose_tracking](https://drive.google.com/file/d/1yGFC_Q9wzSHL1d4eZW_44EBB2H42YKYt) for pose tracking) 
@@ -159,4 +154,4 @@ We provide scripts for all the experiments in the [experiments](experiments) fol
 
 CenterTrack is developed upon [CenterNet](https://github.com/xingyizhou/CenterNet). Both codebases are released under MIT License themselves. Some code of CenterNet are from third-parties with different licenses, please check the CenterNet repo for details. In addition, this repo uses [py-motmetrics](https://github.com/cheind/py-motmetrics) for MOT evaluation and [nuscenes-devkit](https://github.com/nutonomy/nuscenes-devkit) for nuScenes evaluation and preprocessing. See [NOTICE](NOTICE) for detail. Please note the licenses of each dataset. Most of the datasets we used in this project are under non-commercial licenses.
 
-# PFTrack
+
