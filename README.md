@@ -1,4 +1,4 @@
-# Tracking Objects as Points
+# Visible-Thermal Multiple Object Tracking, Progressive Fusion, Large-scale Video Dataset
 Simultaneous object detection and tracking using center points:
 ![](readme/fig2.png)
 > [**Tracking Objects as Points**](http://arxiv.org/abs/2004.01177),            
