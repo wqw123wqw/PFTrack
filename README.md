@@ -4,9 +4,6 @@
 ![](readme/MOT.png)
 > [**Visible-Thermal Multiple Object Tracking: Large-scale Video Dataset and Progressive Fusion Approach**](https://arxiv.org/abs/2408.00969),            
 > Yabin Zhu, Qianwu Wang, Chenglong Li, Jin Tang, Zhixiang Huang  
-*************************************************
-> *arXiv technical report ([arXiv 2408.00969](https://arxiv.org/abs/2408.00969))*  
-*************************************************
 
 
     @article{zhou2020tracking,
