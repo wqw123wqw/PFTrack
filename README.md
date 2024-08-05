@@ -2,10 +2,10 @@
 
 ## Visible-Thermal Multiple Object Tracking: Large-scale Video Dataset and Progressive Fusion Approach
 ![](readme/MOT.png)
-> [**Visible-Thermal Multiple Object Tracking: Large-scale Video Dataset and Progressive Fusion Approach**](http://arxiv.org/abs/2004.01177),            
+> [**Visible-Thermal Multiple Object Tracking: Large-scale Video Dataset and Progressive Fusion Approach**](https://arxiv.org/abs/2408.00969),            
 > Yabin Zhu, Qianwu Wang, Chenglong Li, Jin Tang, Zhixiang Huang  
 *************************************************
-> *arXiv technical report ([arXiv 2004.01177](http://arxiv.org/abs/2004.01177))*  
+> *arXiv technical report ([arXiv 2408.00969](https://arxiv.org/abs/2408.00969))*  
 *************************************************
 
 
@@ -152,5 +152,6 @@ python run_mot_challenge.py
 ## Acknowledgement
 
 Tracking Objects as Points: https://github.com/xingyizhou/CenterTrack
+
 trackeval: https://github.com/JonathonLuiten/TrackEval
 	
