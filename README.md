@@ -6,11 +6,15 @@
 > Yabin Zhu, Qianwu Wang, Chenglong Li, Jin Tang, Zhixiang Huang  
 
 
-    @article{zhou2020tracking,
-      title={Visible-Thermal Multiple Object Tracking: Large-scale Video Dataset and Progressive Fusion Approach},
-      author={Yabin Zhu, Qianwu Wang, Chenglong Li, Jin Tang, Zhixiang Huang},
-      year={2024}
-    }
+    @misc{zhu2024visiblethermalmultipleobjecttracking,
+      title={Visible-Thermal Multiple Object Tracking: Large-scale Video Dataset and Progressive Fusion Approach}, 
+      author={Yabin Zhu and Qianwu Wang and Chenglong Li and Jin Tang and Zhixiang Huang},
+      year={2024},
+      eprint={2408.00969},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2408.00969}, 
+}
 Contact: [1597474391@qq.com](mailto:1597474391@qq.com). Any questions or discussion are welcome! 
 
 ## Abstract
@@ -64,14 +68,9 @@ If you want to reproduce the results in the paper for benchmark evaluation or tr
 
 ### VT-MOT
 
-MOT is is used to train and evaluate the system. We will only use the training set (and create a validation set from it) for developing this project.
+MOT is  used to train and evaluate the system. We will only use the training set and  testing set  for developing this project.
 
 We have packed the dataset preprocessing code as a script.
-
-~~~
-    cd $PFTrack_ROOT/tools/
-    python vis_tracking_mot.py
-~~~
 
 The script includes:
 
