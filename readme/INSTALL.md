@@ -1,6 +1,6 @@
 # Installation
 
-The code was tested on Ubuntu 16.04, with [Anaconda](https://www.anaconda.com/download) Python 3.7, CUDA 10.0, and [PyTorch]((http://pytorch.org/)) v1.0.
+The code was tested on Ubuntu 16.04, with [Anaconda](https://www.anaconda.com/download) Python 3.7, CUDA 11.8, and [PyTorch]((http://pytorch.org/)) v1.0.
 It should be compatible with PyTorch >=1.7 and python >=3.7 (you will need to switch DCNv2 version for PyTorch >1.0).
 After installing Anaconda:
 
