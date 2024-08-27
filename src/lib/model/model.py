@@ -7,8 +7,7 @@ import torch
 import torch.nn as nn
 import os
 import pdb
-from .networks.dla_fusion_mid import DLASeg
-# from .networks.dla_V3_M import CenterTrack_RGBT
+from .networks.dla_V3_M import CenterTrack_RGBT
 from .networks.resdcn import PoseResDCN
 from .networks.resnet import PoseResNet
 from .networks.dlav0 import DLASegv0
@@ -16,7 +15,7 @@ from .networks.generic_network import GenericNetwork
 
 _network_factory = {
   'resdcn': PoseResDCN,
-  'dla': DLASeg,
+  'dla':CenterTrack_RGBT,
   'res': PoseResNet,
   'dlav0': DLASegv0,
   'generic': GenericNetwork
