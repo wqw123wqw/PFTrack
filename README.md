@@ -15,7 +15,7 @@
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2408.00969}, 
 }
-Contact: [1597474391@qq.com](mailto:1597474391@qq.com). Any questions or discussion are welcome! 
+Contact: [wang1597474391@foxmail.com](mailto:wang1597474391@foxmail.com). Any questions or discussion are welcome! 
 
 ## Abstract
 The complementary benefits from visible and thermal infrared data are widely utilized in various computer vision task, such as visual tracking, semantic segmentation and object detection, but rarely explored in Multiple Object Tracking (MOT). In this work, we contribute a large-scale Visible-Thermal video benchmark for MOT, called VT-MOT. VT-MOT has the following main advantages. 1) The data is large scale and high diversity. VT-MOT includes 582 video sequence pairs, 401k frame pairs from surveillance, drone, and handheld platforms. 2) The cross-modal alignment is highly accurate. We invite several professionals to perform both spatial and temporal alignment frame by frame. 3) The annotation is dense and high-quality. VT-MOT has 3.99 million annotation boxes annotated and double-checked by professionals, including heavy occlusion and object re-acquisition (object disappear and reappear) challenges.
