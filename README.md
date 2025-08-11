@@ -54,7 +54,7 @@ proposed method compared with state-of-the-art methods.
 
 <p align="center"> <img src='readme/VTMOT.gif' align="center" height="460px"> </p>
 
-our model can be got in [model](https://pan.baidu.com/s/17ykng7S9x8wVlULeucKryQ?pwd=233w  [233w])
+our model can be got in [model](https://pan.baidu.com/s/1FD2UrJBMbCPRDXa_IJNVYQ?pwd=ad2t [ad2t])
 
 ## Installation
 
