@@ -74,7 +74,8 @@ We have packed the dataset preprocessing code as a script.
 
 The script includes:
 
-- Download and unzip the dataset from [VTMOT](https://pan.baidu.com/s/1C8rXxVmxg6jAB7Xs7E45zw?pwd=chcw [chcw]).
+- Download and unzip the dataset from [VTMOT]Dataset link: https://drive.google.com/drive/folders/1YTcfvE1-6imTelXzra9JU-s88Yhe9We_?usp=sharing
+Model link: https://drive.google.com/drive/folders/1ieEjOqkUuLn8ikyIggS-HMNNJJDOz50W?usp=sharing.
 
 - Convert it into COCO format using `tools/convert_mot_rgbt_to_coco.py`.
 
