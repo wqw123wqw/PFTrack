@@ -54,7 +54,7 @@ proposed method compared with state-of-the-art methods.
 
 <p align="center"> <img src='readme/VTMOT.gif' align="center" height="460px"> </p>
 
-our model can be got in [model](https://pan.baidu.com/s/1FD2UrJBMbCPRDXa_IJNVYQ?pwd=ad2t [ad2t])
+our model can be got in [model](https://drive.google.com/drive/folders/1ieEjOqkUuLn8ikyIggS-HMNNJJDOz50W?usp=sharing)
 
 ## Installation
 
@@ -74,8 +74,7 @@ We have packed the dataset preprocessing code as a script.
 
 The script includes:
 
-- Download and unzip the dataset from [VTMOT]Dataset link: https://drive.google.com/drive/folders/1YTcfvE1-6imTelXzra9JU-s88Yhe9We_?usp=sharing
-Model link: https://drive.google.com/drive/folders/1ieEjOqkUuLn8ikyIggS-HMNNJJDOz50W?usp=sharing.
+- Download and unzip the dataset from [VTMOT]:( https://drive.google.com/drive/folders/1YTcfvE1-6imTelXzra9JU-s88Yhe9We_?usp=sharing).
 
 - Convert it into COCO format using `tools/convert_mot_rgbt_to_coco.py`.
 
